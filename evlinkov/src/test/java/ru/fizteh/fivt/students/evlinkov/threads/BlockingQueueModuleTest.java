@@ -1,11 +1,10 @@
 package ru.fizteh.fivt.students.evlinkov.threads;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class BlockingQueueModuleTest {
-    private static BlockingQueue <Integer> queue = new BlockingQueue<Integer>(10);
+    private static BlockingQueue<Integer> queue = new BlockingQueue<Integer>(10);
     static class TestOffer implements Runnable {
         private List<Integer> elements = new LinkedList<Integer>();
         TestOffer(int numberOfElements) {
@@ -23,8 +22,8 @@ public class BlockingQueueModuleTest {
     }
     static class TestTake implements Runnable {
         private List<Integer> elements;
-        int numberOfElements;
-        TestTake (int number) {
+        private int numberOfElements;
+        TestTake(int number) {
             numberOfElements = number;
         }
         @Override
@@ -39,7 +38,7 @@ public class BlockingQueueModuleTest {
             } catch (InterruptedException e) { }
         }
     }
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         new Thread(new TestOffer(5)).start();
         new Thread(new TestOffer(3)).start();
         new Thread(new TestOffer(3)).start();
