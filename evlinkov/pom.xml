@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>ru.fizteh.fivt.students</groupId>
-  <artifactId>spumote</artifactId>
+  <artifactId>evlinkov</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>evlinkov</name>
   <url>http://maven.apache.org</url>
