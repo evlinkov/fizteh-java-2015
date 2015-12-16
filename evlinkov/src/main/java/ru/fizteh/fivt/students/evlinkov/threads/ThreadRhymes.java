@@ -1,17 +1,13 @@
 package ru.fizteh.fivt.students.evlinkov.threads;
 
 public class ThreadRhymes {
-    
     public static class Runner {
         private int currentNumber = 1;
-        
         class PutsThread extends Thread {
             private volatile int numberOfThread;
-            
             PutsThread(int number) {
                 numberOfThread = number + 1;
             }
-            
             @Override
             public void run() {
                 while (true) {
@@ -25,7 +21,6 @@ public class ThreadRhymes {
                 }
             }
         }
-        
         void run(int n) {
             PutsThread[] threads = new PutsThread[n];
             for (int i = 0; i < n; ++i) {
@@ -43,7 +38,6 @@ public class ThreadRhymes {
             }
         }
     }
-    
     public static void main(String[] args) {
         int n;
         if (args.length > 0) {
