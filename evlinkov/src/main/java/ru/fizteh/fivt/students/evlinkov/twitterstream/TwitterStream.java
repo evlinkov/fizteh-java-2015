@@ -61,7 +61,7 @@ public class TwitterStream {
                     query.setGeoCode(geoLocation, googleFindPlace.getRadius(), Query.KILOMETERS);
                 }
             }
-            query.setCount(parameters.getLimit());
+            query.setCount(parameters.getLimitTweets());
             QueryResult answer;
             answer = twitter.search(query);
             List<Status> tweets = answer.getTweets();

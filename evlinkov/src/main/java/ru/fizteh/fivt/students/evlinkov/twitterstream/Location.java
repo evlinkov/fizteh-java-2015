@@ -47,8 +47,8 @@ public class Location {
         return radius;
     }
     private double calculateRadius() {
-        LatLng pointerFirst = geocodingResults.geometry.bounds.northeast;
-        LatLng pointerSecond = geocodingResults.geometry.bounds.southwest;
+        LatLng pointerFirst = result.geometry.bounds.northeast;
+        LatLng pointerSecond = result.geometry.bounds.southwest;
         double rad = 180.0 / PI;
         double x = cos(pointerFirst.lat / rad) * cos(pointerFirst.lng / rad) * cos(pointerSecond.lat / rad)
                 * cos(pointerSecond.lng / rad);
