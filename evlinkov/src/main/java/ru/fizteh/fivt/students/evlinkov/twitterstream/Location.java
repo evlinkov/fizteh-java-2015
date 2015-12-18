@@ -19,7 +19,7 @@ public class Location {
     private static final double RADIUS_OF_THE_EARTH = 6371;
     private GeocodingResult result;
     private double radius;
-    GoogleLocation(String place) throws Exception {
+    Location(String place) throws Exception {
         if (!place.equals("nearby")) {
             String apiKey = getKeyFromProperties();
             GeoApiContext context = new GeoApiContext().setApiKey(apiKey);

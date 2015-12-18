@@ -54,8 +54,8 @@ public class TwitterStream {
             Query query = new Query(parameters.getQuery());
             if (!parameters.getPlace().equals("")) {
                 if (!parameters.getPlace().equals("nearby")) {
-                    GoogleLocation googleFindPlace;
-                    googleFindPlace = new GoogleLocation(parameters.getPlace());
+                    Location googleFindPlace;
+                    googleFindPlace = new Location(parameters.getPlace());
                     GeoLocation geoLocation;
                     geoLocation = new GeoLocation(googleFindPlace.getLocation().lat, googleFindPlace.getLocation().lng);
                     query.setGeoCode(geoLocation, googleFindPlace.getRadius(), Query.KILOMETERS);
@@ -125,8 +125,8 @@ public class TwitterStream {
             track[0] = parameters.getQuery();
             filter = new FilterQuery(0, new long[0], track);
             if (!parameters.getPlace().equals("")) {
-                GoogleGeoLocation findPlace;
-                findPlace = new GoogleGeoLocation((parameters.getPlace()));
+                Location findPlace;
+                findPlace = new Location((parameters.getPlace()));
                 double[][] bounds = {{findPlace.getBounds().southwest.lng,
                         findPlace.getBounds().southwest.lat},
                         {findPlace.getBounds().northeast.lng,
