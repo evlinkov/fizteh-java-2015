@@ -11,9 +11,8 @@ public class TestLocation {
     @Test
     public void test() {
         String place = "Volgograd";
-        LatLng realLocation, programLocation;
         LatLng realLocation = new LatLng(48.7193900, 44.5018400);
-        programLocation = new Location(place).getLocation();
+        LatLng programLocation = new Location(place).getLocation();
         Assert.assertEquals(realLocation, programLocation);
     }
 }

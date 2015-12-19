@@ -2,7 +2,8 @@ package ru.fizteh.fivt.students.evlinkov.twitterstream;
 /**
  * Created by evlinkov on 17.12.15.
  */
-import com.beust.JCommander.Parameter;
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
 import org.junit.Assert;
 import org.junit.Test;
 
