@@ -12,7 +12,9 @@ public class TestLocation {
     public void test() {
         String place = "Volgograd";
         LatLng realLocation = new LatLng(48.7193900, 44.5018400);
-        LatLng programLocation = Location(place).getLocation();
+        Location findPlace;
+        findPlace = new Location(place);
+        LatLng programLocation = findPlace.getLocation();
         Assert.assertEquals(realLocation, programLocation);
     }
 }
